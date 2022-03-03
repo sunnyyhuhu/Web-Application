@@ -1,0 +1,28 @@
+{% extends "socialnetwork/stream_base.html" %}
+
+{% block content %}
+<h2 class="page-name" id="id_page_name">Profile Page for {{profile.user.first_name}} {{profile.user.last_name}}</h2>
+
+{% if not profile.picture %}
+    {% load static %}
+    <img src="{% static 'socialnetwork/other.jpg' %}" id="id_user_picture" alt="My selfie" width="250" height="250">
+{% else %}
+    <img src="{% url 'photo' profile.user.id %}" id="id_user_picture" alt="User selfie" width="250" height="250">
+{% endif %}
+
+<div id="id_user_bio">
+    {{profile.bio_text}}
+</div>
+{% if profile.user in request.user.profile.following.all %}
+    <form action="{% url 'unfollow' profile.user.id %}" method="post">
+        <button id="id_unfollow" class="button"> Unfollow </button>
+        {% csrf_token %}
+    </form>
+{% else %}
+    <form action="{% url 'follow' profile.user.id %}" method="post">
+        <button id="id_follow" class="button"> Follow </button>
+        {% csrf_token %}
+    </form>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "socialnetwork/stream_base.html" %}
+
+{% block content %}
+<h2 class="page-name" id="id_page_name">Follower Stream</h2>
+
+{% for post in posts %}
+    {% if post.user in request.user.profile.following.all %}
+        <div id="id_post_div_{{post.id}}" class="content-font">
+            <a href="{% url 'other' post.user.id %}" class="profile" id="id_post_profile_{{post.id}}">
+                {{post.user.first_name}} {{post.user.last_name}}
+            </a>
+            <span id="id_post_text_{{post.id}}">
+                {{post.text}}
+            </span>
+            <span class="date" id="id_post_date_time_{{post.id}}">
+                {{post.creation_time | date:" n/j/Y g:i A"}}
+            </span>
+        </div>
+
+        <form  class="comment-position">
+            <label class="post-font">Comment:</label>
+            <input type="text" id="id_comment_input_text_{{post.id}}">
+            <button type="submit" class="button" id="id_comment_input_button_{{post.id}}">Submit</button>
+            {% csrf_token%}
+        </form>
+    {% endif %}
+{% endfor %}
+{% endblock %}
+

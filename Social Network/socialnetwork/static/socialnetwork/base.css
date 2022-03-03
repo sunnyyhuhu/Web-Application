@@ -1,0 +1,167 @@
+.big-heading {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: left;
+    padding: 25px 50px;
+    color: lightblue;
+}
+.header {
+    background-color: lavenderblush;
+    margin-left: fill;
+    margin-right: fill;
+    width: 100%;
+}
+.page-name {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0px 50px;
+    color: lightblue;
+    position: absolute;
+    top: 12vw;
+    left: 43vw;
+}
+
+.date {
+    font-style: italic;
+}
+.profile {
+    font-style: oblique;
+    color: lightblue;
+}
+.post-font {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: lightblue;
+    padding: 0px;
+    text-align: center;
+}
+.content-font {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: darkgrey;
+}
+.post-position {
+    position: center;
+}
+.comment-position {
+    text-indent: 30px;
+    margin-left: 70px;
+}
+.form-font {
+    font-size: large;
+    font-weight: normal;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px 19vw;
+    color: lightblue;
+}
+.button {
+    font-size: large;
+    font-weight: bold;
+    color: lightblue;
+    border: none;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    background-color: lavenderblush;
+}
+.button-submit {
+    position: absolute;
+    left: 47.5vw;
+    top: 38vw;
+}
+.button-user {
+    position: absolute;
+    right: 20px;
+}
+.center {
+    text-align: center;
+}
+.user-info {
+    text-align: right;
+    font-family: sans-serif;
+    padding-right: 10px;
+    font-size: x-large;
+}
+
+.message {
+    color:blue;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: sans-serif;
+    padding: 25px 50px;
+}
+
+.search-bar {
+    text-align: center;
+    padding: 25px 50px;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-family: sans-serif;
+    font-size: x-large;
+    padding: 25px 50px;
+}
+
+.errorlist {
+    color:red;
+}
+
+.list {
+    padding: 3px;
+}
+
+.list-link {
+    padding: 5px;
+}
+
+.list-link:hover {
+    background-color:lightgray;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+button {
+    font-size: x-large;
+    padding: 3px;
+}
+
+input {
+    font-size: x-large;
+}
+
+div, form {
+    padding: 4px;
+}
+
+
+.navlink {
+    background-color: lightgray;
+}
+
+.letter {
+    padding: 3px;
+    font-family: sans-serif;
+    font-size: x-large;
+
+}
+
+.letter:hover {
+    background-color:lightgray;
+}

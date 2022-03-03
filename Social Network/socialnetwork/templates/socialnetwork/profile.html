@@ -1,0 +1,35 @@
+{% extends "socialnetwork/stream_base.html" %}
+
+
+{% block content %}
+<h2 class="page-name" id="id_page_name">Profile Page for {{profile.user.first_name}} {{profile.user.last_name}}</h2>
+
+{% if not profile.picture %}
+    {% load static %}
+    <img src="{% static 'socialnetwork/sunnyyhuhu.jpg' %}" id="id_user_picture" alt="My selfie" width="250" height="250">
+{% else %}
+    <img src="{% url 'photo' profile.user.id %}" id="id_user_picture" alt="User selfie" width="250" height="250">
+{% endif %}
+
+<form action="{% url 'profile' %}" method="post" enctype="multipart/form-data">
+    <table>
+        {{form}}
+    </table>
+    {% csrf_token %}
+    <button id="id_update_profile_button">Submit</button>
+</form>
+
+<div>
+    You are following:
+    <ul>
+        {% for u in profile.following.all %}
+            <li>
+                <a href="{% url 'other' u.id %}" id="id_profile_link_{{u}}">
+                    {{u.first_name}} {{u.last_name}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

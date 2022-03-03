@@ -1,0 +1,24 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+<div id="id_header_div" class="header">
+    <div class="big-heading" id="id_site_name">
+        Blog Master
+        <a href="{% url 'profile' %}">
+            <button id="id_nav_profile" class="button button-user">{{user.first_name}} {{user.last_name}}</button>
+        </a>
+    </div>
+    <div>
+        <a href="{% url 'global' %}">
+            <button id="id_nav_global_stream" class="button">Global</button>
+        </a>
+        <a href="{% url 'follower' %}">
+            <button id="id_nav_follower_stream" class="button">Follower</button>
+        </a>
+        <a href="{% url 'logout' %}">
+            <button id="id_nav_logout" class="button">Logout</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
